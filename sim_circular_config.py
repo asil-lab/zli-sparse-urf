@@ -72,8 +72,31 @@ if __name__ == "__main__":
     visualize_graph(result_graph_alpha_5, nominal_config)
 
     plt.tight_layout() 
-    plt.savefig("figures/sparse-graphs.png", dpi=300, bbox_inches='tight')
+    # plt.savefig("figures/sparse-graphs-circular.png", dpi=300, bbox_inches='tight')
     plt.show()
+
+    # plot individual graph
+    plt.figure(figsize=(3, 3))
+    visualize_graph(result_graph_alpha_05, nominal_config)
+    plt.savefig("figures/graph-alpha-05-circular.png", dpi=300, bbox_inches='tight')
+
+    plt.figure(figsize=(3, 3))
+    visualize_graph(result_graph_alpha_15, nominal_config)
+    plt.savefig("figures/graph-alpha-15-circular.png", dpi=300, bbox_inches='tight')
+
+    plt.figure(figsize=(3, 3))
+    visualize_graph(result_graph_alpha_5, nominal_config)
+    plt.savefig("figures/graph-alpha-5-circular.png", dpi=300, bbox_inches='tight')
+
+    plt.figure(figsize=(3, 3))
+    visualize_graph(result_graph_yang2019, nominal_config)
+    plt.savefig("figures/graph-yang2019-circular.png", dpi=300, bbox_inches='tight')
+
+    plt.figure(figsize=(3, 3))
+    visualize_graph(result_graph_lin2016_Grunbaum, nominal_config)
+    plt.savefig("figures/graph-lin2016_Grunbaum-circular.png", dpi=300, bbox_inches='tight')
+
+    # plt.show()
 
 
     ################################################# plot 2 #################################################
@@ -108,7 +131,7 @@ if __name__ == "__main__":
     plt.xticks(x_axis)
     # plt.legend()
     # plt.grid()
-    plt.savefig("figures/eigenvalues.png", dpi=300, bbox_inches='tight')
+    # plt.savefig("figures/eigenvalues-circular.png", dpi=300, bbox_inches='tight')
     plt.show()
 
 
@@ -134,7 +157,7 @@ if __name__ == "__main__":
     # plt.legend()
 
     plt.yscale('log')
-    plt.savefig("figures/tracking-error.png", dpi=300, bbox_inches='tight')
+    # plt.savefig("figures/tracking-error-circular.png", dpi=300, bbox_inches='tight')
     plt.show()
 
 
