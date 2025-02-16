@@ -77,6 +77,10 @@ if __name__ == "__main__":
 
     # plot individual graph
     plt.figure(figsize=(3, 3))
+    visualize_graph(Graph(np.eye(NUM_NODES)), nominal_config)
+    plt.savefig("figures/graph-config.png", dpi=300, bbox_inches='tight')
+
+    plt.figure(figsize=(3, 3))
     visualize_graph(result_graph_alpha_05, nominal_config)
     plt.savefig("figures/graph-alpha-05-circular.png", dpi=300, bbox_inches='tight')
 
