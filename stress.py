@@ -92,7 +92,7 @@ class Stress:
         
         # Populate the matrix with random values where conditions are met
         for j in range(cols):
-            for i in range(j, min(j + d + 2, rows)):
+            for i in range(j, j+d+1):
                 M[i, j] = np.random.rand()
         
         # Vectorize the matrix (convert it to a column vector)

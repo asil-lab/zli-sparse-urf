@@ -35,7 +35,7 @@ def affine_formation_control(target_config, stress_mat, gain = 1, max_itr = 1000
     
     for i in range(max_itr):
         control_input = stress_mat @ config.T
-        config -= 10 * dt * control_input.T
+        config -= gain * dt * control_input.T
         config[:, :D+1] = target_config[:, :D+1]
         tracking_error[i] = np.linalg.norm(config - target_config)
     
@@ -65,7 +65,7 @@ def visualize_graph(graph, node_config):
     
     elif d == 3:
         from mpl_toolkits.mplot3d import Axes3D
-        # fig = plt.figure()
+        fig = plt.figure()
         ax = fig.add_subplot(111, projection='3d')
         
         for i, j in graph.edges:
