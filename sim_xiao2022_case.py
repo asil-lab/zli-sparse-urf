@@ -112,7 +112,7 @@ if __name__ == "__main__":
     plt.xlabel('index')
     plt.ylabel('eigenvalues')
 
-    plt.legend()
+    # plt.legend()
     plt.tight_layout()
 
     plt.savefig("figures/eigenvalues-xiao.png", dpi=300, bbox_inches='tight')
@@ -137,7 +137,7 @@ if __name__ == "__main__":
 
     plt.xlabel('time')
     plt.ylabel('tracking error')
-    plt.legend()
+    # plt.legend()
     plt.tight_layout()
     plt.yscale('log')
 
